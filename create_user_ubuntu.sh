@@ -29,3 +29,7 @@ cd ~
 cp .ssh/authorized_keys /home/john/.ssh/
 chown -R john:john /home/john/.ssh
 
+echo "Create User OK!"
+echo "Please setup password for new user with command 'passwd user'! "
+echo "passwd user"
+
