@@ -17,7 +17,7 @@ apt-get -y upgrade
 
 # Only fro learning
 # userdel user  #olny delete user
-# ussedel -r user # delete user and user's home dir.
+# userdel -r user # delete user and user's home dir.
 
 # Adduser john
 useradd -m john  #create user john and he's home dir and john group ,not password
