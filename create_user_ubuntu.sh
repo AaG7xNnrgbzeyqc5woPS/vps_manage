@@ -27,5 +27,5 @@ usermod -aG sudo john
 mkdir /home/john/.ssh
 cd ~
 cp .ssh/authorized_keys /home/john/.ssh/
-chown -r john:john /home/john/.ssh
+chown -R john:john /home/john/.ssh
 
