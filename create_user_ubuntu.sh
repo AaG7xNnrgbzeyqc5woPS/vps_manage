@@ -1,6 +1,8 @@
 # usage:
 # longin in root 
 # create_user_ubuntu.sh
+# 参数:
+# $1 = username
 
 # upgrade package
 echo -------------------------------------
@@ -19,17 +21,20 @@ apt-get -y upgrade
 # userdel user  #olny delete user
 # userdel -r user # delete user and user's home dir.
 
+
+username=$1 
+user_ssh_dir="/home/${username}/.ssh/"
 # Adduser john
-useradd -m john  #create user john and he's home dir and john group ,not password
-usermod -aG sudo john
+useradd -m --shell /bin/bash ${username}  #create user john and he's home dir and john group ,not password
+usermod -aG sudo ${username}
 
 #cp authorized_keys to /home/john/.ssh
-mkdir /home/john/.ssh
+mkdir ${user_ssh_dir}
 cd ~
-cp .ssh/authorized_keys /home/john/.ssh/
-chown -R john:john /home/john/.ssh
+cp .ssh/authorized_keys ${user_ssh_dir}
+chown -R ${username}:${username} ${user_ssh_dir}
 
-echo "Create User OK!"
+echo "Create User : ${username} OK!"
 echo "Please setup password for new user with command 'passwd user'! "
-echo "passwd user"
+echo "passwd ${username}"
 
