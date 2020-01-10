@@ -3,6 +3,12 @@
 # create_user_ubuntu.sh
 # 参数:
 # $1 = username
+# usage:
+#   wget https://raw.githubusercontent.com/AaG7xNnrgbzeyqc5woPS/vps_manage/master/create_user_ubuntu.sh
+#   chmod +x create_user_ubuntu.sh
+#   ./create_user_ubuntu.sh newuser
+#   passwd
+#------------------------
 
 # upgrade package
 echo -------------------------------------
